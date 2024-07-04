@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Semánticas en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 0.5em;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 1em;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        section, article, aside {
+            margin-bottom: 1em;
+        }
+        pre {
+            background: #eee;
+            padding: 1em;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Etiquetas Semánticas en HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#estructura-basica">Estructura Básica</a></li>
+                <li><a href="#otros-elementos">Otros Elementos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="estructura-basica">
+            <h2>Estructura Básica del Documento</h2>
+            <article>
+                <h3>&lt;header&gt;</h3>
+                <p>Representa el encabezado de una sección o página. Puede contener elementos como logotipos, títulos, menús de navegación, etc.</p>
+                <pre><code>&lt;header&gt;
+    &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;nav&gt;</h3>
+                <p>Define un conjunto de enlaces de navegación.</p>
+                <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;main&gt;</h3>
+                <p>Delimita el contenido principal del documento. Solo debe haber un elemento <code>&lt;main&gt;</code> por página.</p>
+                <pre><code>&lt;main&gt;
+    &lt;h2&gt;Bienvenido a Mi Sitio Web&lt;/h2&gt;
+    &lt;p&gt;Este es el contenido principal de la página.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;section&gt;</h3>
+                <p>Define secciones en un documento, como capítulos, partes de un índice, pestañas, etc.</p>
+                <pre><code>&lt;section&gt;
+    &lt;h2&gt;Sección 1&lt;/h2&gt;
+    &lt;p&gt;Contenido de la sección 1.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;article&gt;</h3>
+                <p>Representa un contenido autónomo que podría ser distribuido y reutilizado de forma independiente, como artículos de noticias, publicaciones de blog, comentarios, etc.</p>
+                <pre><code>&lt;article&gt;
+    &lt;h2&gt;Título del Artículo&lt;/h2&gt;
+    &lt;p&gt;Contenido del artículo.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;aside&gt;</h3>
+                <p>Contenido adicional o complementario que está relacionado con el contenido principal pero no es esencial para su comprensión, como barras laterales, anuncios, etc.</p>
+                <pre><code>&lt;aside&gt;
+    &lt;h3&gt;Información Adicional&lt;/h3&gt;
+    &lt;p&gt;Este es un contenido complementario.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;footer&gt;</h3>
+                <p>Representa el pie de una sección o página, y puede contener información sobre el autor, enlaces relacionados, información de derechos de autor, etc.</p>
+                <pre><code>&lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+        </section>
+        <section id="otros-elementos">
+            <h2>Otros Elementos Semánticos</h2>
+            <article>
+                <h3>&lt;figure&gt;</h3>
+                <p>Contenedor para contenido independiente, generalmente con una leyenda (<code>&lt;figcaption&gt;</code>), como ilustraciones, diagramas, fotos, etc.</p>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+    &lt;figcaption&gt;Descripción de la imagen.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;figcaption&gt;</h3>
+                <p>Proporciona una leyenda o título para el contenido de un elemento <code>&lt;figure&gt;</code>.</p>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+    &lt;figcaption&gt;Descripción de la imagen.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;mark&gt;</h3>
+                <p>Resalta texto que es de especial interés o relevancia.</p>
+                <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt; en un párrafo.&lt;/p&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;time&gt;</h3>
+                <p>Representa una fecha u hora específica.</p>
+                <pre><code>&lt;time datetime="2024-07-04"&gt;4 de julio de 2024&lt;/time&gt;</code></pre>
+            </article>
+            <article>
+                <h3>&lt;address&gt;</h3>
+                <p>Proporciona información de contacto para el autor o propietario del documento.</p>
+                <pre><code>&lt;address&gt;
+    &lt;p&gt;Contacta con nosotros: &lt;a href="mailto:info@misitioweb.com"&gt;info@misitioweb.com&lt;/a&gt;&lt;/p&gt;
+&lt;/address&gt;</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Devssoft | Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
